@@ -1,0 +1,22 @@
+info:
+  name: Metabase DynamoDB Driver
+  version: 0.1.0-SNAPSHOT
+  description: Allows Metabase to connect to Amazon DynamoDB
+driver:
+  name: dynamodb
+  lazy-load: true
+  display-name: DynamoDB
+  connection-properties:
+    - name: endpoint
+      display-name: Endpoint
+    - name: region-id
+      display-name: Region ID
+    - name: access-key-id
+      display-name: Access Key ID
+      required: false
+    - name: secret-access-key
+      display-name: Secret Access Key
+      required: false
+init:
+  - step: load-namespace
+    namespace: metabase.driver.dynamodb
